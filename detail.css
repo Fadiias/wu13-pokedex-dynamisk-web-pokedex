@@ -1,0 +1,400 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10em;
+    color: white;
+    font-family: sans-serif;
+    align-items: center;
+}
+
+.logos {
+    width: 207px;
+    height: 200px;
+    position: fixed;
+    left: 209px;
+    top: 4px;
+}
+
+/* Body styling with green background */
+body {
+    font-family: sans-serif;
+    max-width: 100%;
+    min-height: 100vh;
+    background-color: rgba(116, 203, 72, 1);
+    /* Light green background */
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 410px;
+}
+
+/* Pokémon detail container */
+article {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    width: 402px;
+    box-shadow: inset 0px 0px 6px 2px rgb(0 0 0 / 64%);
+    position: relative;
+}
+
+/* Pokémon name and ID */
+article h2 {
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+
+}
+
+article .id {
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    color: #666;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Pokémon sprite */
+article img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 20px;
+    border-radius: 5px;
+    margin-top: -10em;
+}
+
+/* Type buttons */
+.type {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 16px;
+    margin: 0 5px 5px 0;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    cursor: default;
+
+}
+
+
+.type.Grass {
+    background-color: #78c850;
+    /* Green for Grass type */
+    color: #fff;
+    border: none;
+}
+
+.type.Poison {
+    background-color: #a040a0;
+    /* Purple for Poison type */
+    color: #fff;
+    border: none;
+}
+
+.type.Fire {
+    background-color: #f08030;
+    /* Orange for Fire type */
+    color: #fff;
+    border: none;
+}
+
+.type.Water {
+    background-color: #6890f0;
+    /* Blue for Water type */
+    color: #fff;
+    border: none;
+}
+
+.type.Flying {
+    background-color: #a890f0;
+    /* Light purple for Flying type */
+    color: #fff;
+    border: none;
+}
+
+.type.Bug {
+    background-color: #A8B820;
+    /* Yellow-green for Bug type */
+    color: #fff;
+    border: none;
+}
+
+/* Stats row (Abilities, Weight, Height) */
+.stats-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    padding: 1em 0em 2em 0em;
+    column-gap: 3em;
+}
+
+.stats {
+    font-size: 11px;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-right: solid 0.2px darkgrey;
+    padding-right: 2em;
+    height: 6em;
+}
+
+.statss {
+    display: flex;
+    column-gap: 5px;
+}
+
+.stats-row div img {
+    width: 20px;
+    height: 20px;
+    margin: auto;
+}
+
+.stats-row .icon {
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: 5px;
+}
+
+.abilities {
+    display: block;
+    /* Forces new line */
+    white-space: pre-line;
+    /* Respects line breaks */
+}
+
+/* Description (About text) */
+.description {
+    margin-top: 10px;
+    text-align: left;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* Base Stats heading */
+article h3 {
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Base Stats list */
+article ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+article li {
+    font-size: 11px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+}
+
+/* Progress bars for Base Stats */
+
+/* Navigation arrows */
+.nav-arrow {
+    cursor: pointer;
+    font-size: 27px;
+    /* font-weight: bold; */
+    padding: 10px;
+    position: absolute;
+    top: -5%;
+    transform: translateY(-50%);
+    /* background: rgba(0, 0, 0, 0.1); */
+    border-radius: 50%;
+    width: 78px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    color: white;
+    justify-content: center;
+}
+
+.nav-arrow.left {
+    left: 30px;
+}
+
+.nav-arrow.right {
+    right: 30px;
+}
+
+/* Phone-responsive styles */
+@media screen and (max-width: 410px) {
+    body {
+        padding: 10px;
+    }
+
+    article {
+        padding: 10px;
+        margin: 0;
+        width: 402px;
+        box-shadow: inset 0px 0px 6px 2px rgb(0 0 0 / 64%);
+    }
+
+    article h2 {
+        font-size: 20px;
+    }
+
+    article .id {
+        font-size: 14px;
+    }
+
+    article img {
+        width: 150px;
+        height: 150px;
+    }
+
+    article p,
+    .description,
+    article li {
+        font-size: 12px;
+    }
+
+    article h3 {
+        font-size: 16px;
+    }
+
+    .stats-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .stats-row div {
+        margin-bottom: 5px;
+    }
+
+
+    article progress {
+        height: 8px;
+    }
+
+    .nav-arrow {
+        top: 10px;
+        font-size: 20px;
+    }
+
+    .nav-arrow.left {
+        left: 10px;
+    }
+
+    .nav-arrow.right {
+        right: 10px;
+    }
+}
+
+
+body {
+    background-color: #e0f7e0;
+    /* Default light green */
+    transition: background-color 0.3s;
+    /* Smooth transition for color changes */
+}
+
+/* Type-specific background colors (optional, for reference) */
+.type.grass {
+    background-color: #78C850;
+}
+
+.type.poison {
+    background-color: #A040A0;
+}
+
+.type.fire {
+    background-color: #F08030;
+}
+
+.type.water {
+    background-color: #6890F0;
+}
+
+.type.flying {
+    background-color: #A890F0;
+}
+
+.type.bug {
+    background-color: #A8B820;
+}
+
+/* Progress bars for Base Stats */
+article progress {
+    width: 100%;
+    height: 7px;
+    margin-left: 10px;
+    flex-grow: 1;
+    border-radius: 5px;
+}
+
+/* General styling for progress bar */
+article progress[value] {
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    border-radius: 5px;
+    background-color: transparent;
+}
+
+/* Background of the progress bar */
+article progress[value]::-webkit-progress-bar {
+    background-color: #e0e0e0;
+    border-radius: 5px;
+}
+
+/* Fill color of the progress bar */
+article progress[value]::-webkit-progress-value {
+    background-color: var(--progress-color, #78c850);
+    /* Default to green */
+    border-radius: 5px;
+}
+
+/* Firefox-specific progress bar fill */
+article progress[value]::-moz-progress-bar {
+    background-color: var(--progress-color, #78c850);
+    /* Ensure compatibility with Firefox */
+    border-radius: 5px;
+}
+
+/* Dark Mode */
+.dark-mode article progress[value]::-webkit-progress-bar {
+    background-color: #444;
+    /* Darker background in dark mode */
+}
+
+.dark-mode article progress[value]::-webkit-progress-value {
+    background-color: var(--progress-color, #78c850);
+    /* Ensure dynamic color */
+}
+
+.dark-mode article progress[value]::-moz-progress-bar {
+    background-color: var(--progress-color, #78c850);
+}
